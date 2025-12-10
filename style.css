@@ -1,0 +1,242 @@
+body {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 100; /* thin */
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  
+}
+
+:root {
+  --media-max-width: 900px; /* max width for displayed images */
+  --media-box-width: 90%;   /* responsive width (percentage of container) */
+  --media-box-height: 480px; /* fixed display box height so all images match */
+  --hero-height: 40vh; /* unified hero height for equal spacing */
+}
+
+
+header {
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  text-align: left; /* allinea il testo a sinistra */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100; /* peso light */
+}
+
+/* Ensure heading inside header uses thin weight */
+header h1 {
+  font-weight: 100;
+  margin: 0;
+}
+
+/* slight negative kerning (kerning -50 -> -0.05em) */
+header h1 {
+  letter-spacing: -0.05em;
+}
+
+/* Make header link visually identical to the heading (no underline, inherit color) */
+header h1 a,
+header h1 a:link,
+header h1 a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+header h1 a:hover,
+header h1 a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* rimuove sottolineatura e colore dal link */
+.hero a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* stile per il testo "itsreal.pdf" */
+.hero-text {
+  text-decoration: none !important;
+  color: inherit !important;
+  font-weight: 300 !important;
+  margin-top: -40px; /* opzionale, per distanziare dal bordo dell'immagine */
+  display: block;   /* assicura che stia su una nuova riga */
+  text-align: center; /* centra il testo sotto l'immagine */
+  padding-right: 35px;
+}
+
+.hero-mini .hero-text {
+  margin-top: -95px; /* adjust this value as needed */
+  margin-bottom: 75px;
+}
+
+
+/* stile footer */
+footer {
+  margin-top: 60px;
+  padding: 20px;
+  padding-right: 10px;
+}
+
+footer a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* stile per il testo footer" */
+footer p {
+  text-decoration: none !important;
+  color: inherit !important;
+  font-weight: 300 !important;
+  margin-top: -10px; /* opzionale, per distanziare dal bordo dell'immagine */
+  display: block;   /* assicura che stia su una nuova riga */
+  text-align: center; /* centra il testo sotto l'immagine */
+  padding-left: 0px;
+
+}
+
+.wastefooter {
+  margin-top: -100px; 
+
+}
+
+
+
+/* Make all h2 use the same thin weight as h1 for consistency */
+h2 {
+  margin-top: 5px;
+  font-weight: 100;
+}
+
+
+/* Hero image centered on the page (use unified height for consistent spacing) */
+.hero {
+  display: block;
+  align-items: center 0;
+  justify-content: center;
+  min-height: var(--hero-height);
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-left: 60px;
+}
+
+/* equal vertical gap between successive hero sections */
+.hero + .hero {
+  margin-top: -100px;
+}
+
+
+/* hero size helpers use the same unified height so spacing stays equal */
+.hero-mini { min-height: var(--hero-height); }
+.hero-center { min-height: var(--hero-height); }
+
+/* Gallery grid for images/alien */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding: 20px;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.gallery .item { display:block; width:100%; text-align:center; padding-left: 100px; }
+.center-image,
+.gallery .item img {
+  width: var(--media-box-width);
+  max-width: var(--media-max-width);
+  height: var(--media-box-height);
+  display: block;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: none;
+  background: #ffffff;
+}
+
+/* Increase size by 10% for the itsreal.pdf (alien) gallery only */
+.gallery.itsreal {
+
+  --media-max-width: calc(var(--media-max-width) * 1.1);
+  --media-box-height: calc(var(--media-box-height) * 1.1);
+  margin: 0 auto;
+}
+
+/* Reduce first and last images in itsreal gallery to 50% and center them */
+.gallery.itsreal .item:nth-child(1) img,
+.gallery.itsreal .item:nth-child(11) img {
+  width: calc(var(--media-box-width) * 0.5);
+  height: calc(var(--media-box-height) * 0.5);
+  max-width: calc(var(--media-max-width) * 0.5);
+  display: block;
+  padding-right: 75px;
+  margin: 0 auto; /* center horizontally */
+}
+
+.gallery.itsreal .item:nth-child(1) img {
+  margin-top: -300px; /* add top margin for first image */
+}
+/* testi gallery google */
+.gallery a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.gallery.itsreal .item {
+  margin-top: -3px;
+  margin-bottom: -50px; 
+}
+/* stile per il testo "itsreal.pdf" */
+.gallery-text {
+  text-decoration: none !important;
+  color: inherit !important;
+  font-weight: 300 !important;
+  margin-top: 10px; /* opzionale, per distanziare dal bordo dell'immagine */
+  display: block;   /* assicura che stia su una nuova riga */
+  text-align: center; /* centra il testo sotto l'immagine */
+  padding-right: 90px;
+  
+}
+
+.gallery .item {
+  display:block; 
+  background-color: transparent !important;
+  margin-top: -88px;
+  padding-bottom: 80px; 
+}
+.gallery.itswasteland .item {
+  margin-top: -223px;
+  margin-bottom: 200px;
+
+}
+
+.intro {
+  border: 0px solid #ffffff00;     /* box border */
+  padding: 20px;               /* space inside the box */
+  max-width: 300px;            /* optional width */
+  margin: 0px left;           /* center the box horizontally */
+  margin-bottom: -60px;
+  text-align: justify;
+}
+
+.download-btn {
+  display: block;
+  width: fit-content;
+  text-align: left;
+  margin-top: 90px;
+  margin-left: 75px;
+  padding: 12px 20px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.2s ease-in-out;
+}
+
+.download-btn:hover {
+  background-color: #ffffff;
+  transform: scale(1.05);
+}
+
+
+
