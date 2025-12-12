@@ -238,3 +238,178 @@ h2 {
   transform: scale(1.05);
 }
 
+/* Mobile-only overrides
+   - Add this file after your main stylesheet (see instructions below).
+   - Designed to NOT edit your original CSS; it overrides styles on small screens only.
+   - Adjust selectors if your project uses different class names. */
+
+/* Target typical mobile widths */
+@media (max-width: 767px) {
+  /* Make page background white like desktop */
+  html, body {
+    background-color: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  /* Make frames / panels / cards transparent like desktop */
+  .frame,
+  .image-frame,
+  .card,
+  .panel,
+  .box,
+  .content-frame,
+  .text-frame,
+  .meta,
+  .card-body,
+  .content-card {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Remove background / frame from download buttons and similar CTA */
+  .download-button,
+  .btn-download,
+  .download,
+  .btn--download,
+  a.download,
+  button.download,
+  .btn,
+  button {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: inherit !important;
+  }
+
+  /* Center hero images and gallery images */
+  .hero,
+  .hero-image,
+  .hero .image,
+  .hero img,
+  .hero .hero-media,
+  .gallery,
+  .gallery-wrapper,
+  .gallery-list,
+  .gallery-grid,
+  .gallery-item,
+  .gallery img,
+  .gallery-image,
+  figure img {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none !important;
+    max-width: 100% !important;
+    height: auto !important;
+    left: auto !important;
+    right: auto !important;
+  }
+
+  /* Center textual headers */
+  h1,
+  h2,
+  .page-title,
+  .header h1,
+  .header h2,
+  .title {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
+
+  /* Center the description of each page (not item descriptions),
+     keep it above gallery and avoid overlap */
+  .page-description,
+  .page-intro,
+  .description,
+  .section-intro,
+  .page-summary,
+  .intro {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 0 1rem 0 !important;
+    position: relative !important;
+    z-index: 2 !important;
+    padding: 0 1rem !important;
+  }
+
+  /* Ensure gallery flows below the page description and doesn't overlap */
+  .gallery,
+  .gallery-wrapper,
+  .gallery-grid,
+  .gallery-list {
+    position: static !important;
+    clear: both !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    /* give a small gap to be safe */
+    padding-bottom: 1rem !important;
+  }
+
+  /* Center text inside cards/items, including the header/subheader */
+  .card .content,
+  .item .content,
+  .content,
+  .text,
+  p {
+    text-align: center !important;
+  }
+
+  /* If images were floated left/right on desktop, undo on mobile */
+  img.align-left,
+  img.align-right,
+  .align-left,
+  .align-right {
+    float: none !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  /* If some elements are absolutely positioned on desktop, make them static so they stack */
+  .hero-section,
+  .content-section,
+  .main,
+  .container,
+  .site-wrapper {
+    position: static !important;
+    display: block !important;
+  }
+
+  /* Best-effort catch-all: any element with inline absolute style will be made static */
+  [style*="position:absolute"] {
+    position: static !important;
+  }
+
+  /* Gallery grid centering for common grid/flex implementations */
+  .gallery-grid,
+  .gallery-list,
+  .gallery-row,
+  .grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+  }
+
+  /* Keep buttons centered */
+  .button,
+  .btn,
+  .cta,
+  .download-button,
+  .btn-download {
+    display: inline-block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  /* Accessibility / spacing tweaks */
+  h1, h2, .page-description {
+    line-height: 1.2 !important;
+  }
+}
+
