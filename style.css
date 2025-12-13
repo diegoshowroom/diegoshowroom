@@ -275,11 +275,14 @@ h2 {
   a.download,
   button.download,
   .btn,
-  button {
+  .download-btn {
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
     color: inherit !important;
+    margin-top: -120px !important;
+    margin-bottom: 350px !important;
+    margin-left: 15px !important; 
   }
 
   /* Center hero images and gallery images */
@@ -297,13 +300,48 @@ h2 {
   .gallery-image,
   figure img {
     display: block !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin-left: center !important;
+    margin-right: center !important;
+    margin-top: 50px;
+    margin-bottom: 50px;
     float: none !important;
     max-width: 100% !important;
     height: auto !important;
     left: auto !important;
     right: auto !important;
+  }
+  /* adjust aline gallery */
+  .gallery.itsreal {
+    display: center !important;
+    margin-left: -100px !important;
+    margin-bottom: -60px !important;
+  }
+  .gallery.gallery.itsreal .item:nth-child(1) img,
+  .gallery.gallery.itsreal .item:nth-child(11) img {
+    margin-left: 85px !important;
+  } 
+  /* adjust wasteland gallery */
+  .gallery.itswasteland .item:nth-child(1) img,
+  .gallery.itswasteland .item:nth-child(11) img {
+    width: calc(var(--media-box-width) * 0.5) !important; 
+    margin-left: 85px !important;
+    margin-top: -250px !important;
+  }
+  .wastefooter {
+    margin-top: -250px !important;
+  }
+  
+  /* adjust google gallery */
+  .gallery {
+    display: center !important;
+    margin-left: -100px !important;
+    margin-bottom: -100px !important;
+    width: 0.5 !important;
+  } 
+  .gallery-text {
+    margin-top: -42px !important;
+    margin-bottom: 40px !important;
+    margin-left: 50px !important;
   }
 
   /* Center textual headers */
@@ -314,8 +352,9 @@ h2 {
   .header h2,
   .title {
     text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin-left: center !important;
+    margin-right: center !important;
+    margin-bottom: -0px !important;
     display: block !important;
   }
 
@@ -329,12 +368,16 @@ h2 {
   .intro {
     display: block !important;
     width: 100% !important;
-    text-align: center !important;
+    text-align: justify !important;
     margin: 0 0 1rem 0 !important;
+    margin-left: 20px !important;
+    margin-bottom: 150px !important;
     position: relative !important;
     z-index: 2 !important;
     padding: 0 1rem !important;
   }
+
+
 
   /* Ensure gallery flows below the page description and doesn't overlap */
   .gallery,
@@ -411,5 +454,16 @@ h2 {
   h1, h2, .page-description {
     line-height: 1.2 !important;
   }
+  .hero.hero-mini {
+    margin-top: -60px !important;
+    margin-bottom: 60px !important;
+  }
+  
+  .hero.hero-mini .hero-text {
+    margin-top: -40px !important;
+    margin-bottom: 40px !important;
+  }
+
+
 }
 
